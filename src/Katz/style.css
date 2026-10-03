@@ -1,0 +1,723 @@
+/* =========================
+   VARIÁVEIS / IDENTIDADE AWAW
+========================= */
+
+.katz-page {
+  --roxo: #9333ea;
+  --roxo-escuro: #7e22ce;
+  --roxo-texto: #9333ea;
+  --verde: #4dcf33;
+  --branco: #ffffff;
+  --texto: #404040;
+  --texto-suave: #404040;
+  --borda: #f0f0f0;
+  --raio-card: 24px;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--branco);
+  color: var(--texto);
+}
+
+
+/* =========================
+   BASE
+========================= */
+
+.katz-page main {
+  flex: 1;
+}
+
+.katz-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 640px) {
+  .katz-container {
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .katz-container {
+    padding: 0 32px;
+  }
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.katz-botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 8px;
+}
+
+.katz-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s,
+    color 0.2s,
+    box-shadow 0.2s;
+}
+
+.katz-btn:focus-visible,
+.katz-link-obra:focus-visible,
+.katz-card-imagem:focus-visible {
+  outline: 3px solid var(--roxo);
+  outline-offset: 3px;
+}
+
+.katz-btn-primario {
+  background: var(--roxo);
+  color: var(--branco);
+  border: 2px solid var(--roxo);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.katz-btn-primario:hover {
+  background: var(--roxo-escuro);
+  border-color: var(--roxo-escuro);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.12);
+}
+
+.katz-btn-secundario {
+  background: var(--branco);
+  color: #404040;
+  border: 2px solid #f0f0f0;
+}
+
+.katz-btn-secundario:hover {
+  border-color: var(--roxo-texto);
+  color: var(--roxo-texto);
+}
+
+
+/* =========================
+   PERFIL
+========================= */
+
+.katz-perfil {
+  padding: 48px 0 80px;
+  background: linear-gradient(
+    135deg,
+    rgba(147, 51, 234, 0.06),
+    var(--branco) 50%,
+    rgba(77, 207, 51, 0.06)
+  );
+}
+
+.katz-perfil-grid {
+  display: grid;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .katz-perfil-grid {
+    grid-template-columns: 7fr 5fr;
+    gap: 64px;
+  }
+}
+
+.katz-perfil-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.katz-titulo {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--texto);
+}
+
+.titulo {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--verde);
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .katz-titulo {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .katz-titulo {
+    font-size: 60px;
+  }
+}
+
+.katz-destaque {
+  position: relative;
+  display: inline-block;
+}
+
+.katz-destaque-texto {
+  position: relative;
+  z-index: 1;
+  padding: 0 6px;
+}
+
+.katz-destaque::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--verde);
+  border-radius: 8px;
+  transform: rotate(-1deg);
+}
+
+.katz-perfil-texto p {
+  margin: 0;
+  max-width: 40rem;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--texto-suave);
+}
+
+@media (min-width: 640px) {
+  .katz-perfil-texto p {
+    font-size: 18px;
+  }
+}
+
+
+/* =========================
+   FOTO
+========================= */
+
+.katz-perfil-foto {
+  position: relative;
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.katz-foto-moldura {
+  position: relative;
+  padding: 16px;
+  border-radius: 28px;
+  background: linear-gradient(
+    135deg,
+    rgba(147, 51, 234, 0.12),
+    rgba(77, 207, 51, 0.12)
+  );
+}
+
+.katz-foto-moldura img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 18px;
+  background: var(--branco);
+}
+
+.katz-foto-legenda {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: -28px 0 0 auto;
+  width: fit-content;
+  position: relative;
+  padding: 12px 20px;
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  margin-right: 24px;
+}
+
+.katz-foto-legenda strong {
+  font-size: 15px;
+  color: var(--texto);
+}
+
+.katz-foto-legenda span {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--roxo-texto);
+}
+
+
+/* =========================
+   OBRAS
+========================= */
+
+.katz-obras {
+  padding: 72px 0;
+  background: var(--branco);
+}
+
+.katz-secao-cabecalho {
+  margin-bottom: 40px;
+}
+
+.katz-secao-cabecalho h2 {
+  margin: 0 0 8px;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--texto);
+}
+
+@media (min-width: 640px) {
+  .katz-secao-cabecalho h2 {
+    font-size: 40px;
+  }
+}
+
+.katz-secao-cabecalho p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--texto-suave);
+}
+
+.katz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.katz-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-card);
+  padding: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  transition:
+    box-shadow 0.3s,
+    border-color 0.3s;
+}
+
+.katz-card:hover {
+  border-color: rgba(147, 51, 234, 0.4);
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+}
+
+.katz-card-imagem {
+  display: block;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.katz-card-imagem img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 5 / 6;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.katz-card:hover .katz-card-imagem img {
+  transform: scale(1.05);
+}
+
+.katz-card-corpo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px 6px 4px;
+}
+
+.katz-card-corpo h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--texto);
+}
+
+.katz-card-corpo p {
+  margin: 0;
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--texto-suave);
+}
+
+.katz-card-rodape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.katz-preco {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--roxo-texto);
+}
+
+.katz-link-obra {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(147, 51, 234, 0.08);
+  color: var(--roxo-escuro);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.katz-link-obra:hover {
+  background: var(--roxo);
+  color: var(--branco);
+}
+
+
+/* =========================
+   CONTRATAR
+========================= */
+
+.katz-contratar {
+  padding: 0 0 80px;
+}
+
+.katz-contratar-caixa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 48px 24px;
+  text-align: center;
+  border-radius: 28px;
+  background: linear-gradient(
+    135deg,
+    rgba(147, 51, 234, 0.09),
+    rgba(77, 207, 51, 0.09)
+  );
+}
+
+.katz-contratar-caixa h2 {
+  margin: 0;
+  max-width: 28rem;
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--texto);
+}
+
+@media (min-width: 640px) {
+  .katz-contratar-caixa h2 {
+    font-size: 34px;
+  }
+}
+
+.katz-contratar-caixa p {
+  margin: 0 0 12px;
+  font-size: 16px;
+  color: var(--texto-suave);
+}
+
+
+/* =========================
+   PÁGINA INDIVIDUAL DA OBRA
+========================= */
+
+/* Título */
+
+.katz-page .titulo {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 30px 20px 35px;
+
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+
+  color: var(--verde);
+  text-align: center;
+}
+
+
+/* Layout principal
+   IMAGEM | DESCRIÇÃO
+ */
+
+.katz-page .obra-layout {
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+  gap: 60px;
+  align-items: center;
+
+  padding: 10px 0 60px;
+}
+
+
+/* =========================
+   LADO DA IMAGEM
+========================= */
+
+.katz-page .obra-imagem-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.katz-page .obra-image {
+  display: block;
+
+  width: 100%;
+  max-width: 500px;
+  height: 520px;
+
+  object-fit: contain;
+
+  margin: 0 auto;
+
+  border-radius: 8px;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Preço */
+
+.katz-page .preco {
+  margin: 12px 0 0;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  color: var(--roxo-texto);
+
+  text-align: center;
+}
+
+
+/* =========================
+   LADO DIREITO
+========================= */
+
+.katz-page .obra-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+}
+
+
+/* Descrição */
+
+.katz-page .content {
+  width: 100%;
+  max-width: 520px;
+
+  margin: 0 auto;
+
+  padding: 25px;
+
+  background: var(--branco);
+
+  border: 1px solid var(--borda);
+  border-radius: 20px;
+}
+
+.katz-page .content p {
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  color: var(--texto-suave);
+
+  text-align: center;
+}
+
+
+/* =========================
+   BOTÕES DA OBRA
+========================= */
+
+.katz-page .buttons-container {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin: 28px 0 0;
+}
+
+.katz-page .btn-back,
+.katz-page .btn-artista {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+
+  padding: 10px 20px;
+
+  border-radius: 999px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
+}
+
+.katz-page .btn-back {
+  background-color: var(--roxo-texto);
+  color: var(--branco);
+
+  border: none;
+}
+
+.katz-page .btn-artista {
+  background-color: var(--roxo-texto);
+  color: var(--branco);
+
+  border: none;
+}
+
+.katz-page .btn-back:hover,
+.katz-page .btn-artista:hover {
+  background-color: var(--roxo-escuro);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 800px) {
+
+  .katz-page .obra-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .katz-page .obra-image {
+    height: auto;
+    max-height: 520px;
+  }
+
+  .katz-page .obra-info {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .katz-page .content {
+    max-width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .katz-page .titulo {
+    padding-top: 20px;
+    font-size: 30px;
+  }
+
+  .katz-page .obra-layout {
+    width: calc(100% - 30px);
+    padding-bottom: 40px;
+  }
+
+  .katz-page .obra-image {
+    width: 100%;
+    max-width: 350px;
+    max-height: 450px;
+  }
+
+  .katz-page .content {
+    padding: 20px;
+  }
+
+  .katz-page .content p {
+    font-size: 15px;
+  }
+
+  .katz-page .buttons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .katz-page .btn-back,
+  .katz-page .btn-artista {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+
+/* =========================
+   ACESSIBILIDADE / MOVIMENTO
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .katz-card,
+  .katz-card-imagem img,
+  .katz-btn,
+  .katz-link-obra,
+  .katz-page .btn-back,
+  .katz-page .btn-artista {
+    transition: none;
+  }
+
+  .katz-card:hover .katz-card-imagem img {
+    transform: none;
+  }
+}
