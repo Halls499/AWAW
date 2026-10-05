@@ -25,7 +25,7 @@ export default function Artists() {
       category: "desenho & ilustração",
       image: "../../public/img/Katz/Retrato Kat(teste).jpeg",
       description:
-        "Artista brasileira apaixonada por criar experiências visuais únicas, combinando cores vibrantes, formas abstratas e elementos interativos.",
+        "Artista que transforma moda, arte e criatividade em traços, formas e ideias, dando vida a inspirações através de desenhos, croquis e projetos visuais.",
       portfolio: "Desenhista de moda",
       location: "Peruibe-SP, Brasil",
       externalUrl: "Katz",
