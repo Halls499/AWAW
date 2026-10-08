@@ -219,7 +219,7 @@ export default function SignUp() {
               {/* Botão Submit */}
               <button
                 type="submit"
-                className="w-full py-4 px-6 bg-white-400 border border-black/20 to-cyan-400 text-slate-900 font-bold text-lg rounded-xl hover:shadow-lg hover:shadow-purple-400/50 transition-all duration-300"
+                className="block w-full py-3 bg-purple-600 text-white font-bold text-center text-sm rounded-full"
               >
                 Criar Conta
               </button>
@@ -228,7 +228,7 @@ export default function SignUp() {
               <div className="text-center">
                 <p className="text-black-300">
                   Já tem uma conta?{" "}
-                  <Link to="/" className="text-purple-400 hover:text-purple-300 font-semibold">
+                  <Link to="/" className="text-purple-600 hover:text-purple-300 font-semibold">
                     Faça Login
                   </Link>
                 </p>
