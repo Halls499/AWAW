@@ -71,7 +71,7 @@ export default function SignUp() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-white-to-br from-slate-900 via-white-500 to-slate-900">
       <Navbar />
       
       <main className="pt-4 pb-16 px-4 sm:px-6 lg:px-8">
@@ -80,19 +80,13 @@ export default function SignUp() {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               {getTitle()}
             </h1>
-            <p className="text-gray-300 text-lg">
-              {type === "artist" && "Compartilhe seu talento com o mundo"}
-              {type === "company" && "Encontre os melhores artistas para seus projetos"}
-              {type === "volunteer" && "Faça a diferença através da arte"}
-              {type === "partner" && "Apoie projetos que transformam vidas"}
-            </p>
           </div>
 
-          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
+          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-black/10">
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Nome / Nome da Empresa */}
               <div>
-                <label className="block text-white font-semibold mb-2">
+                <label className="block text-black font-semibold mb-2">
                   {type === "company" ? "Nome da Empresa" : "Nome Completo"}
                 </label>
                 <input
@@ -101,48 +95,48 @@ export default function SignUp() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-emerald-400 transition-colors"
+                  className="w-full px-4 py-3 bg-white/10 border border-black/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-emerald-400 transition-colors"
                   placeholder={type === "company" ? "Nome da sua empresa" : "Seu nome completo"}
                 />
               </div>
 
               {/* Email */}
               <div>
-                <label className="block text-white font-semibold mb-2">E-mail</label>
+                <label className="block text-black font-semibold mb-2">E-mail</label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-emerald-400 transition-colors"
+                  className="w-full px-4 py-3 bg-white/10 border border-black/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-emerald-400 transition-colors"
                   placeholder="seu@email.com"
                 />
               </div>
 
               {/* Senha */}
               <div>
-                <label className="block text-white font-semibold mb-2">Senha</label>
+                <label className="block text-black font-semibold mb-2">Senha</label>
                 <input
                   type="password"
                   name="password"
                   value={formData.password}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-emerald-400 transition-colors"
+                  className="w-full px-4 py-3 bg-white/10 border border-black/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-emerald-400 transition-colors"
                   placeholder="Mínimo 8 caracteres"
                 />
               </div>
 
               {/* Telefone */}
               <div>
-                <label className="block text-white font-semibold mb-2">Telefone</label>
+                <label className="block text-black font-semibold mb-2">Telefone</label>
                 <input
                   type="tel"
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-emerald-400 transition-colors"
+                  className="w-full px-4 py-3 bg-white/10 border border-black/20 rounded-xl text-black placeholder-gray-400 focus:outline-none focus:border-emerald-400 transition-colors"
                   placeholder="(00) 00000-0000"
                 />
               </div>
@@ -150,22 +144,22 @@ export default function SignUp() {
               {/* Categoria (apenas para artista) */}
               {type === "artist" && (
                 <div>
-                  <label className="block text-white font-semibold mb-2">Categoria</label>
+                  <label className="block text-black font-semibold mb-2">Categoria</label>
                   <select
                     name="category"
                     value={formData.category}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:border-emerald-400 transition-colors"
+                    className="w-full px-4 py-3 bg-white/10 border border-black/20 rounded-xl text-black focus:outline-none focus:border-emerald-400 transition-colors"
                   >
-                    <option value="" className="bg-slate-800">Selecione uma categoria</option>
-                    <option value="painter" className="bg-slate-800">Pintor(a)</option>
-                    <option value="sculptor" className="bg-slate-800">Escultor(a)</option>
-                    <option value="photographer" className="bg-slate-800">Fotógrafo(a)</option>
-                    <option value="illustrator" className="bg-slate-800">Ilustrador(a)</option>
-                    <option value="muralist" className="bg-slate-800">Muralista</option>
-                    <option value="designer" className="bg-slate-800">Designer</option>
-                    <option value="other" className="bg-slate-800">Outro</option>
+                    <option value="" className="bg-white-800">Selecione uma categoria</option>
+                    <option value="painter" className="bg-white-800">Pintor(a)</option>
+                    <option value="sculptor" className="bg-white-800">Escultor(a)</option>
+                    <option value="photographer" className="bg-white-800">Fotógrafo(a)</option>
+                    <option value="illustrator" className="bg-white-800">Ilustrador(a)</option>
+                    <option value="muralist" className="bg-white-800">Muralista</option>
+                    <option value="designer" className="bg-white-800">Designer</option>
+                    <option value="other" className="bg-white-800">Outro</option>
                   </select>
                 </div>
               )}
@@ -173,13 +167,13 @@ export default function SignUp() {
               {/* Portfolio / Website (para artista) */}
               {type === "artist" && (
                 <div>
-                  <label className="block text-white font-semibold mb-2">Portfolio / Website</label>
+                  <label className="block text-black font-semibold mb-2">Portfolio / Website</label>
                   <input
                     type="url"
                     name="portfolio"
                     value={formData.portfolio}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-emerald-400 transition-colors"
+                    className="w-full px-4 py-3 bg-white/10 border border-black/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-emerald-400 transition-colors"
                     placeholder="https://seu-portfolio.com"
                   />
                 </div>
@@ -209,7 +203,7 @@ export default function SignUp() {
 
               {/* Descrição */}
               <div>
-                <label className="block text-white font-semibold mb-2">
+                <label className="block text-black font-semibold mb-2">
                   {type === "artist" ? "Sobre seu Trabalho" : "Sobre sua Empresa"}
                 </label>
                 <textarea
@@ -217,7 +211,7 @@ export default function SignUp() {
                   value={formData.description}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-emerald-400 transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-white/10 border border-black/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-emerald-400 transition-colors resize-none"
                   placeholder={type === "artist" ? "Conte sobre seu estilo artístico e experiência..." : "Conte sobre sua empresa e o que faz..."}
                 />
               </div>
@@ -225,16 +219,16 @@ export default function SignUp() {
               {/* Botão Submit */}
               <button
                 type="submit"
-                className="w-full py-4 px-6 bg-gradient-to-r from-emerald-400 to-cyan-400 text-slate-900 font-bold text-lg rounded-xl hover:shadow-lg hover:shadow-emerald-400/50 transition-all duration-300"
+                className="w-full py-4 px-6 bg-white-400 border border-black/20 to-cyan-400 text-slate-900 font-bold text-lg rounded-xl hover:shadow-lg hover:shadow-purple-400/50 transition-all duration-300"
               >
                 Criar Conta
               </button>
 
               {/* Link para Login */}
               <div className="text-center">
-                <p className="text-gray-300">
+                <p className="text-black-300">
                   Já tem uma conta?{" "}
-                  <Link to="/" className="text-emerald-400 hover:text-emerald-300 font-semibold">
+                  <Link to="/" className="text-purple-400 hover:text-purple-300 font-semibold">
                     Faça Login
                   </Link>
                 </p>
