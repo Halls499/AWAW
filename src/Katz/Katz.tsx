@@ -6,82 +6,69 @@ type Obra = {
   id: number;
   titulo: string;
   descricao: string;
-  preco: string;
 };
 
-// Edite aqui o título, a descrição e o preço de cada obra.
+// Definição das obras
 const obras: Obra[] = [
   {
     id: 1,
     titulo: "Royalty",
     descricao: "Descrição da obra 1: técnica, tamanho e inspiração.",
-    preco: "R$50,00",
   },
   {
     id: 2,
     titulo: "Is the revolution",
     descricao: "Descrição da obra 2: técnica, tamanho e inspiração.",
-    preco: "R$50,00",
   },
   {
     id: 3,
     titulo: "Dead Nature",
     descricao: "Descrição da obra Dead Nature: técnica, tamanho e inspiração.",
-    preco: "R$50,00",
   },
   {
     id: 4,
     titulo: "Vivi Aurum",
     descricao: "Descrição da obra Vivi Aurum: técnica, tamanho e inspiração.",
-    preco: "R$50,00",
   },
   {
     id: 5,
     titulo: "Obra 5",
     descricao: "Descrição da obra 5: técnica, tamanho e inspiração.",
-    preco: "R$50,00",
   },
   {
     id: 6,
     titulo: "Lost Heaven",
     descricao: "Descrição da obra Lost Heaven: técnica, tamanho e inspiração.",
-    preco: "R$50,00",
   },
   {
     id: 7,
     titulo: "Obra 7",
     descricao: "Descrição da obra 7: técnica, tamanho e inspiração.",
-    preco: "R$50,00",
   },
   {
     id: 8,
     titulo: "Obra 8",
     descricao: "Descrição da obra 8: técnica, tamanho e inspiração.",
-    preco: "R$50,00",
   },
   {
     id: 9,
     titulo: "Vivi Aurum",
     descricao: "Descrição da obra Vivi Aurum: técnica, tamanho e inspiração.",
-    preco: "R$50,00",
   },
   {
     id: 10,
     titulo: "Obra 10",
     descricao: "Descrição da obra 10: técnica, tamanho e inspiração.",
-    preco: "R$50,00",
   },
   {
     id: 11,
     titulo: "Obra 11",
     descricao: "Descrição da obra 11: técnica, tamanho e inspiração.",
-    preco: "R$50,00",
   },
   {
     id: 12,
     titulo: "Gloow",
     descricao: "Descrição da obra Gloow: técnica, tamanho e inspiração.",
-    preco: "R$50,00",
   },
 ];
 
@@ -168,8 +155,6 @@ function Kat() {
                     <p>{obra.descricao}</p>
 
                     <div className="katz-card-rodape">
-                      <span className="katz-preco">{obra.preco}</span>
-
                       <a
                         href={`/katz/obra${obra.id}`}
                         className="katz-link-obra"
@@ -184,20 +169,24 @@ function Kat() {
           </div>
         </section>
 
-        {/* CONTRATAR */}
+        {/* CONTRATAR OU COMPRAR OBRA */}
         <section className="katz-contratar">
           <div className="katz-container">
             <div className="katz-contratar-caixa">
               <h2>Quer uma obra feita para o seu projeto?</h2>
               <p>Fale com a Katz e conte sua ideia.</p>
+              <div className="katz-botoes">
               <button className="katz-btn katz-btn-primario">
                 Contratar artista
               </button>
+              <a className="katz-btn katz-btn-primario" href="/katz/marketplace">
+                Comprar obras
+              </a>
+              </div>
             </div>
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );

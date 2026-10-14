@@ -157,7 +157,7 @@
   font-weight: 900;
   line-height: 1.1;
   letter-spacing: -0.02em;
-  color: var(--verde);
+  color: var(--roxo);
   text-align: center;
 }
 
@@ -462,7 +462,7 @@
   line-height: 1.1;
   letter-spacing: -0.02em;
 
-  color: var(--verde);
+  color: #7C3AED;
   text-align: center;
 }
 
@@ -635,6 +635,13 @@
   transform: translateY(-1px);
 }
 
+.katz-botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 8px;
+}
+
 
 /* =========================
    CELULAR
@@ -719,5 +726,86 @@
 
   .katz-card:hover .katz-card-imagem img {
     transform: none;
+  }
+}
+
+
+/* DETALHES DA OBRA - MARKETPLACE */
+
+.katz-detalhe-container {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.katz-detalhe-obra {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+}
+
+.katz-detalhe-imagem {
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.katz-detalhe-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.katz-detalhe-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.katz-detalhe-info h1 {
+  margin: 0;
+  font-size: 70px;
+  line-height: 1.1;
+}
+
+.katz-detalhe-preco {
+  margin: 0;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.katz-detalhe-descricao{
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* ADAPTAÇÃO PARA CELULARES */
+
+@media (max-width: 768px) {
+  .katz-detalhe-container {
+    padding: 40px 0;
+  }
+
+  .katz-detalhe-obra {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .katz-detalhe-imagem {
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+
+  .katz-detalhe-info h1 {
+    font-size: 2.2rem;
+  }
+
+  .katz-detalhe-preco {
+    font-size: 1.8rem;
   }
 }

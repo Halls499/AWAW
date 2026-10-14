@@ -21,7 +21,7 @@ function Obra({ titulo, imagem, alt, descricao }: ObraProps) {
           <div className="obra-imagem-container">
             <img src={imagem} alt={alt} className="obra-image" />
 
-            <p className="preco">R$ 50,00</p>
+            
           </div>
 
           <div className="obra-info">
@@ -32,7 +32,7 @@ function Obra({ titulo, imagem, alt, descricao }: ObraProps) {
             </div>
 
             <div className="buttons-container">
-              <button className="btn-artista">Comprar trabalho</button>
+              
 
               <a href="/katz" className="btn-back">
                 Voltar à artista

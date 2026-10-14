@@ -177,13 +177,28 @@ export default function Artists() {
 
   const categories = [
     "Todos",
-    "Muralismo",
-    "Arte Urbana",
-    "Pintura",
-    "Escultura & Instalação",
-    "Fotografia",
+    "Amigurumi",
     "Arte Conceitual",
+    "Arte Urbana",
+    "Art abstratas",
+    "Artes cênicas",
     "Artes Visuais & Pop",
+    "Artesanato",
+    "Ator & Atriz",
+    "Cerâmicas",
+    "Colagens",
+    "Crochê",
+    "Dança & Teatro",
+    "Desenho & Ilustração",
+    "Escultura",
+    "Escultura & Instalação",
+    "Escritura",
+    "Fotografia",
+    "Fotografia",
+    "Ilustração",
+    "Música & Composição",
+    "Pintura em tela",
+    "Poesia",
   ];
 
   const filteredArtists =
