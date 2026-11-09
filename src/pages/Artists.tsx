@@ -285,15 +285,25 @@ export default function Artists() {
                       <span className="truncate">{artist.portfolio}</span>
                     </div>
 
-                    <a
-                      href={artist.externalUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full py-2.5 px-4 bg-purple-50 hover:bg-purple-100 text-purple-700 border border-purple-200 font-semibold text-xs rounded-full flex items-center justify-center gap-1.5 transition-colors"
-                    >
-                      Acessar Portfólio / Acervo
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
+                    {artist.id === 1 || artist.id === 2 ? (
+                      <Link
+                        to={artist.externalUrl}
+                        className="w-full py-2.5 px-4 bg-purple-50 hover:bg-purple-100 text-purple-700 border border-purple-200 font-semibold text-xs rounded-full flex items-center justify-center gap-1.5 transition-colors"
+                      >
+                        Acessar Portfólio
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </Link>
+                    ) : (
+                      <a
+                        href={artist.externalUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full py-2.5 px-4 bg-purple-50 hover:bg-purple-100 text-purple-700 border border-purple-200 font-semibold text-xs rounded-full flex items-center justify-center gap-1.5 transition-colors"
+                      >
+                        Acessar Portfólio / Acervo
+                        <ExternalLink className="w-3.5 h-3.5" />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
