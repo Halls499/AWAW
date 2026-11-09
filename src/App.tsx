@@ -49,7 +49,7 @@ export const routes: RouteObject[] = [
   { path: "/katz/marketplace/:obraId", element: <ObraMarketplace /> },
   { path: "/katz/:obraId", element: <ObraKatz /> },
 
-  { path: "/Mazz", element: <Mazz /> },
+  { path: "/mazz", element: <Mazz /> },
 ];
 
 function App() {

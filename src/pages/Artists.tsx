@@ -28,18 +28,18 @@ export default function Artists() {
         "Artista que transforma moda, arte e criatividade em traços, formas e ideias, dando vida a inspirações através de desenhos, croquis e projetos visuais.",
       portfolio: "Desenhista de moda",
       location: "Peruibe-SP, Brasil",
-      externalUrl: "Katz",
+      externalUrl: "/katz",
     },
     {
       id: 2,
       name: "Mazz",
-      category: "Cantor & Compositor",
+      category: "Música & Composição",
       image: "/img/Mazz/Retrato Mazz.jpg",
       description:
         "Artista com várias composições envolvendo poemas e músicas, abordando temas como amor, desilusão, superação e reflexões internas.",
       portfolio: "Músico com obras a serem gravadas em breve",
       location: "Peruibe-SP, Brasil",
-      externalUrl: "https://www.banksy.co.uk/",
+      externalUrl: "/mazz",
     },
     {
       id: 3,
