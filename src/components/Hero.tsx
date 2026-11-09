@@ -51,7 +51,7 @@ function Hero() {
                 <div className="group bg-white p-3.5 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-neutral-200/80">
                   <div className="h-32 rounded-xl overflow-hidden mb-3 relative bg-neutral-100">
                     <img
-                      src="/public/projects/abaporu.jpg"
+                      src="/projects/abaporu.jpg"
                       alt="Abaporu - Tarsila do Amaral"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
@@ -67,7 +67,7 @@ function Hero() {
                 <div className="group bg-white p-3.5 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-neutral-200/80 mt-6">
                   <div className="h-32 rounded-xl overflow-hidden mb-3 relative bg-neutral-100">
                     <img
-                      src="/public/projects/etnias.jpg"
+                      src="/projects/etnias.jpg"
                       alt="Eduardo Kobra"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
@@ -83,7 +83,7 @@ function Hero() {
                 <div className="group bg-white p-3.5 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-neutral-200/80 -mt-2">
                   <div className="h-32 rounded-xl overflow-hidden mb-3 relative bg-neutral-100">
                     <img
-                      src="/public/projects/sonho.jpg"
+                      src="/projects/sonho.jpg"
                       alt="OSGEMEOS"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
@@ -99,7 +99,7 @@ function Hero() {
                 <div className="group bg-white p-3.5 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-neutral-200/80 mt-4">
                   <div className="h-32 rounded-xl overflow-hidden mb-3 relative bg-neutral-100">
                     <img
-                      src="/public/projects/sebastiao.jpg"
+                      src="/projects/sebastiao.jpg"
                       alt="Sebastião Salgado"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
