@@ -119,7 +119,7 @@ function Kat() {
             <div className="katz-perfil-foto">
               <div className="katz-foto-moldura">
                 <img
-                  src="../../public/img/Katz/Retrato Kat (2).jpeg"
+                  src="/img/Katz/Retrato Kat (2).jpeg"
                   alt="Retrato da artista Katz"
                 />
               </div>
