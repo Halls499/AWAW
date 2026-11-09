@@ -23,7 +23,7 @@ export default function Artists() {
       id: 1,
       name: "Katz",
       category: "Desenho & Ilustração",
-      image: "../../public/img/Katz/Retrato Kat(teste).jpeg",
+      image: "/img/Katz/Retrato Kat(teste).jpeg",
       description:
         "Artista que transforma moda, arte e criatividade em traços, formas e ideias, dando vida a inspirações através de desenhos, croquis e projetos visuais.",
       portfolio: "Desenhista de moda",
@@ -34,7 +34,7 @@ export default function Artists() {
       id: 2,
       name: "Mazz",
       category: "Cantor & Compositor",
-      image: "../../public/img/Mazz/Retrato Mazz.jpg",
+      image: "/img/Mazz/Retrato Mazz.jpg",
       description:
         "Artista com várias composições envolvendo poemas e músicas, abordando temas como amor, desilusão, superação e reflexões internas.",
       portfolio: "Músico com obras a serem gravadas em breve",
@@ -249,9 +249,8 @@ export default function Artists() {
                     className={`w-full h-full object-cover ${
                       artist.id === 2 ? "object-[center_30%]" : "object-top"
                     } group-hover:scale-105 transition-transform duration-500`}
-                    onError={(e) => {
-                      e.currentTarget.src =
-                        "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=800";
+                    onError={() => {
+                      console.error("Imagem não encontrada:", artist.image);
                     }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
