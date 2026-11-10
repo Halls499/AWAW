@@ -21,31 +21,31 @@ export default function About() {
     },
     {
       name: "Raul Mazzone",
-      role: "Diretoria de Tecnologia & Backend",
+      role: "Diretor de Tecnologia & Backend",
       image: "/projects/raul.jpeg",
       bio: "Arquitetura técnica, segurança de dados e infraestrutura de sistemas."
     },
     {
       name: "Wenvel Kaique Campos Gomes",
-      role: "Engenharia de Software & Frontend",
+      role: "Engenheiro de Software & Frontend",
       image: "/projects/wenvel.jpeg",
       bio: "Desenvolvimento da interface web, componentização React e experiência do usuário."
     },
     {
       name: "Cauan Bastos",
-      role: "Curadoria Visual & Design de Produto",
+      role: "Marketing Digital & Social Media",
       image: "https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=600",
       bio: "Diretrizes de identidade visual, acessibilidade e curadoria artística."
     },
     {
       name: "Danilo Gaspar",
-      role: "Relações Institucionais & Parcerias",
+      role: "Qualidade, Testes & Documentação",
       image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600",
       bio: "Captação de organizações, galerias e integração de projetos sociais."
     },
     {
       name: "Guilherme Figueira",
-      role: "Qualidade, Testes & Documentação",
+      role: "Relações Institucionais & Parcerias",
       image: "https://images.pexels.com/photos/1520760/pexels-photo-1520760.jpeg?auto=compress&cs=tinysrgb&w=600",
       bio: "Garantia de conformidade, validação de fluxos e documentação do projeto."
     }
